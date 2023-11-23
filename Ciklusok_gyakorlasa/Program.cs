@@ -83,25 +83,36 @@ namespace Ciklusok_gyakorlasa
 
             // 4. Feladat: Írassuk ki 1000-ig az összes tökéletes számot!
 
-            for (int index = 1; index < 100001; index++)
-            {
-                int osszeg = 0;
+            //for (int index = 1; index < 100001; index++)
+            //{
+            //    int osszeg = 0;
 
-                for (int i = 1; i <= index; i++)
-                {
-                    if (index % i == 0)
-                    {
-                        osszeg += i;
-                    }
-                }
+            //    for (int i = 1; i <= index; i++)
+            //    {
+            //        if (index % i == 0)
+            //        {
+            //            osszeg += i;
+            //        }
+            //    }
 
-                if (osszeg == 2 * index)
-                {
-                    Console.WriteLine($"A szám: {index} tökéletes.");
-                }
-            }
+            //    if (osszeg == 2 * index)
+            //    {
+            //        Console.WriteLine($"A szám: {index} tökéletes.");
+            //    }
+            //}
 
-            Console.ReadKey(true);
+                int atmero = 0;
+                double kerület = 0.0d;
+                double terület = 0.0d;
+                Console.Write("Kérem az átmérőt: ");
+                atmero = Int32.Parse(Console.ReadLine());
+
+                kerület = atmero * Math.PI;
+                terület = atmero * Math.PI / 4;
+
+                Console.WriteLine($"Kerület: {kerület:F2}, terület: {terület:F2}");
+
+                Console.ReadKey(true);
         }
     }
 }
